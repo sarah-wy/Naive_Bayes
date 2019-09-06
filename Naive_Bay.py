@@ -98,7 +98,7 @@ def classifyNB(vec2Classify, p0Vec, p1Vec, pClass1):
     #p1 = reduce(lambda x, y: x * y, vec2Classify * p1Vec) * pClass1  # 对应元素相乘
     #p0 = reduce(lambda x, y: x * y, vec2Classify * p0Vec) * (1.0 - pClass1)
     p1=sum(vec2Classify*p1Vec)+np.log(pClass1)
-    p0=sum(vec2Classify*p1Vec)+np.log(1.0-pClass1)
+    p0=sum(vec2Classify*p0Vec)+np.log(1.0-pClass1)
     print('p0:', p0)
     print('p1:', p1)
     if p1 > p0:
